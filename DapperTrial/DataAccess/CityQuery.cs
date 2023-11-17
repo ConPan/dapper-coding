@@ -12,9 +12,9 @@ namespace DapperTrial.DataAccess
         {
             List<City> cities = new List<City>();
 
-            string sql = "SELECT id, name, population FROM city WHERE countrycode = @countrycode;";
+            string sql = "SELECT id, name, population FROM city WHERE POPULATION BETWEEN 10000 AND 20000 ORDER BY POPULATION DESC;";
 
-            string connectionString = "server=localhost;database=world;AllowUserVariables=True;password=root;user=root";
+            string connectionString = "server=localhost;database=world;AllowUserVariables=True;password=16nov1971;user=root";
 
             using (var connection = new MySqlConnection(connectionString))
             {
